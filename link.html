@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link workshop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+            
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(197, 192, 192);
+            line-height: 1.6;
+        }
+        .container {
+            width: 1200px;
+            /* background-color: rgb(20, 239, 68); */
+            margin: auto
+        }
+
+        .header {
+            text-align: center;
+            color: brown;
+            margin-bottom: 20px;
+        }
+
+        .sub-header {
+            text-align: center;
+            color: dimgray;
+        }
+
+        .card1 {
+            background-color: rgb(255, 255, 255);
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 15px;
+            
+        }
+        .card1.bordercolor-1{border-top: 4px solid rgb(159, 16, 16);}
+        .card1.bordercolor-2{border-top: 4px solid rgb(99, 208, 10);}
+        .card1.bordercolor-3{border-top: 4px solid rgb(227, 227, 5);}
+        .card1.bordercolor-4{border-top: 4px solid rgb(0, 163, 217);}
+        .card1.bordercolor-5{border-top: 4px solid rgb(184, 11, 126);}
+        .card1.bordercolor-6{border-top: 4px solid rgb(41, 5, 147);}
+
+        .card1,
+        .card2 {
+            background-color: rgb(255, 255, 255);
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .card2.bordershadow {
+            border:1px solid rgb(183, 119, 0);
+            box-shadow: 2px 2px 5px rgb(199, 199, 199)
+        }
+
+        code {
+            background-color: rgb(179, 179, 179);
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #f7e36b;
+            padding: 8px 14px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin-top: 6px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+    }
+    
+        .download-btn:hover {
+            background-color: #f4d948;
+    }
+
+      .note {
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: rgba(34, 197, 94, 0.08);
+            border-left: 4px solid #22C55E;
+            border-radius: 8px;
+            color: #86EFAC;
+            font-size: 14px;
+    }
+
+    .note::before{
+        content:"🦎"
+    }
+        pre {
+            background: #f1f1f1;
+            padding: 10px;
+            overflow-x: auto;
+            border-left: #22C55E 4px solid;
+    }
+
+        .link-ext a {
+            text-decoration: none;
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        .image-link img {
+            width: 260px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+        .image-link img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Workshop: Various Link</h1>
+        <p class="sub-header">เรียนรู้ลิงก์หลายรูปแบบ พร้อมตัวอย่างและแบบฝึกหัด</p>
+
+        <div class="card-grid">
+            <!-- card 1 -->
+            <div class="card1 bordercolor-1 link-ext">
+                <h2> 1. External Links</h2>
+                <div class="card2 bordershadow">
+                    <a href="https://www.wikipedia.org/" target="_blank" >Visit Wikipedia</a>
+                    <p><code>target="_blank"</code> เปิดลิงก์ในแท็บใหม่</p>
+                </div>
+                <div class="card2 bordershadow">
+                    <a href="https://www.google.com" target="_self">Visit Google</a>
+                    <p><code>target="_self"</code> เปิดลิงก์ในหน้าเดิม</p>
+                </div>
+            </div>
+            
+            <!-- card 2 -->
+            <div class="card1 bordercolor-2">
+                <h2> 2. Internal Links</h2>
+                <pre>
+                &lt;a href="about.html"&gt;About Us&lt;/a&gt;
+                &lt;a href="#jump"&gt;Jump to Section&lt;/a&gt;
+                &lt;h3 id="jump"&gt;This is the jump target&lt;/h3&gt;
+                </pre>
+                <a href="#jump">Click to jump</a>
+                <h3 id="jump">This is the Jump target.</h3>
+            </div>
+            
+            
+            
+            <!-- card 3 -->
+                <div class="card1 bordercolor-3">
+            
+                <h2>3. Email Link</h2>
+                <pre>
+            &lt;a href="mailto:student@example.com?subject=Hello"&gt;
+            Send an Email &lt;/a&gt;
+                    </pre>
+                <a href="mailto:student@example.com?subject=Hello">Send an Email</a>
+            
+                </div>
+            
+            
+            
+            
+            
+            <!-- card 4 -->
+            
+            <div class="card1 bordercolor-4">
+                <h2>4.Downlode Links</h2>
+                <pre>&lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;</pre>
+                <a href="File4Download/ton.png"download>Download Text File</a>
+                <p>ต้องมีไฟล์ในโฟเดอร์จึงดาวน์โหลดได้จริง</p>
+            </div>
+        </div>
+
+
+
+
+
+<!-- card 5 -->
+
+<div class="card1 bordercolor-5">
+    <h2> 5. Button Links</h2>
+    <p>ลิงก์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติม หรือปุ่มนำทาง</p>
+    <pre>
+    &lt;a href="https://www.example.com" class="btn-link"&gt;
+    Visit Website
+    &lt;/a&gt;
+            </pre>
+
+    <button>Visit Website</button>
+    <p>สร้างปุ่มด้วยแท็ก<code> button</code></p>
+    <pre>
+    &lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
+    - มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
+    - ผูกกับ DOM (document) โดยตรง
+    &lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
+    - นิยมใช้มากกว่า
+    - เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
+    - ผูกกับ window โดยตรง
+            </pre>
+
+    <button>HTML Tutorail</button>
+    <button>Visit Website</button>
+</div>
+
+
+
+
+
+<!-- card 6 -->
+
+<div class="card1 bordercolor-6">
+    <h2>6. Image Link</h2>
+    <p>คลิกที่รูปภาพเพื่อเปิดลิงก์</p>
+    <pre>
+            &lt;a href="https://youtube.com"&gt;
+            &lt;img src="images/sample.jpg" width="250"&gt;
+            &lt;/a&gt;      
+            </pre>
+            <div class="image-link">
+    <a href="https://youtu.be/Zi_XLOBDo_Y?si=B2oZrdH1oYc-666Y" target="_blank"><img
+            src="https://i.redd.it/michael-jackson-creates-the-hee-hee-v0-kphyondbpgzc1.jpg?width=1536&format=pjpg&auto=webp&s=208dc67e63ad1f5243895dfd14e94580a32e64f8"
+            alt="รูปภาพ" width="250"></a>
+            </div>
+    <p class="note">หากต้องการไปรูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์ เช่น <code>images/photo.jpg</code></p>
+    </div>
+
+    </div>
+
+    </body>
+</html>
