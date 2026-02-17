@@ -541,3 +541,155 @@ background: linear-gradient(45deg, #5a67d8, #6b46c1);
 transform: translateY(-2px);
 box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
 }
+
+/* ================= SIDEBAR FORM ================= */
+
+/* card form sidebar */
+.sidebar .card {
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* ---------- GREEN FORM ---------- */
+
+.sidebar .card:nth-child(2) {
+  background: linear-gradient(135deg, #00c9a7, #00b894);
+}
+
+.sidebar .card:nth-child(2) .form-input,
+.sidebar .card:nth-child(2) .form-select,
+.sidebar .card:nth-child(2) .form-textarea {
+
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+}
+
+.sidebar .card:nth-child(2) .form-input::placeholder,
+.sidebar .card:nth-child(2) .form-textarea::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.sidebar .card:nth-child(2) .form-button {
+
+  background: linear-gradient(45deg, #ff7675, #fd79a8);
+}
+
+.sidebar .card:nth-child(2) .form-button:hover {
+
+  transform: translateY(-2px);
+}
+
+
+/* ---------- PURPLE FORM ---------- */
+
+.sidebar .card:nth-child(3) {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+}
+
+.sidebar .card:nth-child(3) .form-input,
+.sidebar .card:nth-child(3) .form-select,
+.sidebar .card:nth-child(3) .form-textarea {
+
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: rgb(255, 254, 254);
+}
+
+.sidebar .card:nth-child(3) .form-input::placeholder,
+.sidebar .card:nth-child(3) .form-textarea::placeholder {
+
+  color: rgba(255,255,255,0.7);
+}
+
+.sidebar .card:nth-child(3) .form-button {
+
+  background: linear-gradient(45deg, #ff7675, #e17055);
+}
+
+.sidebar .card:nth-child(3) .form-button:hover {
+
+  transform: translateY(-2px);
+}
+
+
+/* label สีขาว */
+.sidebar .form-label {
+  color: white;
+}
+
+
+/* spacing */
+.sidebar .form-group {
+  margin-bottom: 12px;
+}
+
+
+/* input focus */
+.sidebar .form-input:focus,
+.sidebar .form-select:focus,
+.sidebar .form-textarea:focus {
+
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+
+/* การ์ดสีขาว */
+.white-section {
+    background: #838181;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* กล่องสีเทาด้านใน */
+.gray-box {
+    background: #e4e6eb;
+    border-radius: 8px;
+    padding: 16px;
+    color: #555;
+}
+
+/* จัดกลาง */
+.center {
+    text-align: center;
+}
+
+/* จำนวน like */
+.like-count {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* sponsor box */
+.sponsor {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer หลัก */
+.footer {
+    background: #1f2328;
+    color: #c9d1d9;
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: 30px;
+}
+
+/* container ข้อความ */
+.footer-content {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ลิงก์ Contact */
+.footer-content a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
