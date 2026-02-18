@@ -30,14 +30,20 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="wrapper">
-            <ul class="nav-menu">
-                <li><a href="" class="active">Home</a></li>
-                <li><a href="">AI Technology</a></li>
-                <li><a href="">Machine Learning</a></li>
-                <li><a href="">Deep Learning</a></li>
-                <li><a href="">AI Tools</a></li>
-                <li><a href="">AI News</a></li>
-            </ul>
+            <div id="burger-menu">
+                <span></span>
+
+            </div>
+            <div id="menu">
+                <ul class="nav-menu">
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="">AI Technology</a></li>
+                    <li><a href="">Machine Learning</a></li>
+                    <li><a href="">Deep Learning</a></li>
+                    <li><a href="">AI Tools</a></li>
+                    <li><a href="">AI News</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Hero content -->
@@ -413,7 +419,92 @@
 
             </main>
         </div>
-    </div>
+        <div class="wrapper" style="margin-top: 40px;">
+            <section class="card">
+                <p class="card-header-line">ราคาทอง</p>
+                <h2 class="post-title">ตารางสรุปราคาทองรายเดือนต่ำสุด-สูงสุดตั่งแต่ปี 2549</h2>
+                <header>
+                    <div class="date-circle">
+                                <span class="date-day">30</span>
+                                <span>AUG</span>
+                            </div>
+                </header>
+                <p class="pont-detail">สรุปข้อมูลราคาทองคําแท่งในประเทศชนิด 96.5% เริ่มตั้งแต่ปี 2549 ถึงปีปัจจุบัน 2568 โดยเป็นการแสดงราคาต่ำสุด ราคาสูงสุดของทุกๆ เดือน รวมถึง ราคารวมที่ปรับเพิ่มขึ้นหรือลดลงในแต่ละเดือน และสรุปราคารวม สูงสุด ต่ำสุด ประจำปี</p>
+                <div class="wrap-table">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">เดือน ปี</th>
+                                <th colspan="3">2569</th>
+                                <th colspan="3">2568</th>
+                            </tr>
+                            <tr>
+                                <th>ขึ้น/ลง</th>
+                                <th>ต่ำสุด</th>
+                                <th>สูงสุด</th>
+                                <th>ขึ้น/ลง</th>
+                                <th>ต่ำสุด</th>
+                                <th>สูงสุด</th>
+                            </tr>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <th class="month">เม.ย.</th>
+                                <td class="delta">-</td>
+                                <td class="delta">-</td>
+                                <td class="delta">-</td>
+                                <td class="delta up"><span class="icon up"></span><span>+1,950</span></td>
+                                <td class="num">49,100</td>
+                                <td class="num">54,800</td>
+                            </tr>
+                            <tr><th class="month">มี.ค.</th>
+                            <td class="delta">-</td>
+                            <td class="delta">-</td>
+                            <td class="delta">-</td>
+                    
+                            <td class="delta up"><span class="icon up"></span><span>+3,750</span></td>
+                            <td class="num">46,350</td>
+                            <td class="num">50,100</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <th class="month">ก.พ.</th>
+                                <td class="delta down"><span class="icon down"></span><span>-1,600</span></td>
+                                <td class="num">68,200</td>
+                                <td class="num">72,550</td>
+                    
+                                <td class="delta up"><span class="icon up"></span><span>+1,850</span></td>
+                                <td class="num">44,600</td>
+                                <td class="num">47,450</td>
+                            </tr>
+                            <tr>
+                                <th class="month">ม.ค.</th>
+                                <td class="deltaup"><span class="icon up"></span><span>+9,250</span></td>
+                                <td class="num">64,550</td>
+                                <td class="num">81,950</td>
+                    
+                                <td class="delta up"><span class="icon up"></span><span>+2,050</span></td>
+                                <td class="num">42,550</td>
+                                <td class="num">44,850</td>
+                            </tr>
+                            <tr class="total">
+                                <th>ทั่งปี</th>
+                                <td class="delta up"><span class="icon up"></span><span>+7,650</span></td>
+                                <td class="num">64,550</td>
+                                <td class="num">81,950</td>
+                    
+                                <td class="delta up"><span class="icon up"></span><span>+22,550</span></td>
+                                <td class="num">42,550</td>
+                                <td class="num">67,400</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </body>
+                                
+                                </section>
+                            </div>
+                        </div>
+                </div>
     
     
     <footer class="footer">
@@ -426,7 +517,27 @@
     </div>
 </footer>
 
+<script>
+        var burgerMenu = document.getElementById('burger-menu');
+        var overlay = document.getElementById('menu');
 
+        burgerMenu.addEventListener('click', function () {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+
+        // ปิดเมนูเมื่อกดลิงก์
+        var menuLinks = document.querySelectorAll('#menu a');
+
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                burgerMenu.classList.remove("close");
+                overlay.classList.remove("overlay");
+            });
+        });
+
+
+    </script>
 
 </body>
 </html>
