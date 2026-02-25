@@ -195,6 +195,10 @@ a:hover {
   background-color: rgb(255, 255, 255);
 }
 /* ============= post Main-Left =========== */
+.post-list{
+  display: flex;
+  flex-direction: column;
+}
 .card {
   background-color: #ffffff;
   border-radius: 4px;
@@ -648,7 +652,7 @@ transform 0.2s ease; */
 }
 
 /* Gold price */
-:root{
+:root {
   --line: rgb(223, 127, 37);
   --bg01: rgb(255, 189, 113);
   --pg02: rgb(201, 255, 184);
@@ -657,7 +661,7 @@ transform 0.2s ease; */
   --down: red;
 }
 
-.wrap-table{
+.wrap-table {
   border-radius: 5px;
   overflow: hidden;
 }
@@ -667,8 +671,6 @@ transform 0.2s ease; */
   color: #000000;
 
   background-color: var(--pg03);
-
-
 
   border-collapse: collapse;
 }
@@ -680,24 +682,24 @@ transform 0.2s ease; */
 }
 
 .price-table thead {
-    background-color: var(--bg01);
+  background-color: var(--bg01);
 }
 
-.month{
-   background-color: var(--bg01);
+.month {
+  background-color: var(--bg01);
 }
 
 .num {
   text-align: right;
 }
-.delta{
+.delta {
   text-align: center;
 }
 
-.delta.up{
+.delta.up {
   color: var(--up);
 }
-.delta.down{
+.delta.down {
   column-gap: var(--down);
 }
 
@@ -706,11 +708,11 @@ transform 0.2s ease; */
   background-color: var(--pg02);
 }
 
-.icon{
+.icon {
   display: inline-block;
   width: 6px;
   height: 6px;
-  border-left:6px solid transparent;
+  border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
 
@@ -718,11 +720,10 @@ transform 0.2s ease; */
   border-bottom: 10px solid rgb(96, 241, 52);
   margin-top: 5px;
 }
-.icon.down{
+.icon.down {
   border-top: 10px solid red;
   margin-top: 5px;
 }
-
 
 /* footer หลัก */
 .footer {
@@ -749,106 +750,130 @@ transform 0.2s ease; */
   text-decoration: underline;
 }
 
+  /* order ใหม่ */
+ .widget oder-intro{order: 1}
+ .order-widget02{order: 2}
+ .order-widget03{order: 3}
+ .order-widget04{order: 4}
+ .order-widget05{order: 5}
+
 /* responsive */
 @media (max-width: 922px) {
-    .site-header {
-        background-color: #dacc08;
-    }
+  .site-header {
+    background-color: #dacc08;
+  }
 }
 
 @media (max-width: 768px) {
-    .site-header {
-        background-color: #17b908;
-    }
-    .hero-grid,
-    .content-layout,
-    .form-row{
-        grid-template-columns: 1fr;
-    }
-    .form-checkbox-group{
-        flex-direction: column;
-        gap: 10px;
-    }
-    .nav-menu{
-      flex-direction: column;
-      padding: 10PX;
-      line-height: 10PX;
-    }
-    .nav-menu li a{
-      border-top: 1px solid wheat;
-    }
+  .site-header {
+    background-color: #17b908;
+  }
+  .hero-grid,
+  .content-layout,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .form-checkbox-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-menu {
+    flex-direction: column;
+    padding: 10px;
+    line-height: 10px;
+  }
+  .nav-menu li a {
+    border-top: 1px solid wheat;
+  }
 }
 
 /* ซ่อนเมนู */
-#burger-menu{
+#burger-menu {
   display: none;
 }
 
 @media (max-width: 576px) {
-    .site-header {
-        background-color: #e40de4;
-    }
-    /* กำหนดขนาด/พื่นที่ */
+  .site-header {
+    background-color: #e40de4;
+  }
+  /* กำหนดขนาด/พื่นที่ */
 
-#burger-menu{
-  display: block;
-  height: 25px;
-  width: 30px;
-  position: relative;
-  z-index: 1000;
-  cursor: pointer;
+  #burger-menu {
+    display: block;
+    height: 25px;
+    width: 30px;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  /* วาดเส้น*/
+
+  #burger-menu span,
+  #burger-menu span::before,
+  #burger-menu span::after {
+    background-color: #d9e3f0;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    display: block;
+    content: "";
+  }
+  /* จัดต่ำแหน่งเส้น*/
+
+  #burger-menu span {
+    top: 11px;
+  }
+  #burger-menu span::before {
+    top: -8px;
+  }
+  #burger-menu span::after {
+    top: 8px;
+  }
+
+  /* Animation เมื่อกด */
+
+  /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
+  #burger-menu.close span {
+    background: transparent;
+  }
+
+  /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
+  /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
+  #burger-menu.close span:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
+  #burger-menu.close span:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  /* ซอ่นเมนู */
+  #menu {
+    display: none;
+    flex-direction: column;
+    background: #0314fd;
+  }
+
+  /* เปิดเมนู */
+  #menu.overlay {
+    display: flex;
+  }
 }
-/* วาดเส้น*/
 
-#burger-menu span,
-#burger-menu span::before,
-#burger-menu span::after{
-  background-color: #d9e3f0;
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  display: block;
-  content: "";
-}
-/* จัดต่ำแหน่งเส้น*/
+/* สหลับตำแหน่ง */
+ /* เรียงลำดับ */
 
-#burger-menu span{top: 11px;}
-#burger-menu span::before{top: -8px;}
-#burger-menu span::after{top: 8px;}
-
-/* Animation เมื่อกด */
-
-    /* ทำให้เส้น “กลาง” หายไป (โปร่งใส) */
-    #burger-menu.close span {
-        background: transparent;
-    }
-
-    /* เส้นบน rotate(45deg) หมุนเฉียงไปทางขวา */
-    /* top: 0; ทำให้ทั้งสองเส้น “มาซ้อนกันตรงกลาง” ก่อนหมุน */
-    #burger-menu.close span:before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    /* เส้นล่าง rotate(-45deg) หมุนเฉียงไปทางซ้าย */
-    #burger-menu.close span:after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-    /* ซอ่นเมนู */
-    #menu{
-      display: none;
-      flex-direction: column;
-      background: #0314fd;
-    }
-
-    /* เปิดเมนู */
-    #menu.overlay {
-      display: flex;
-    }
-
-}
+  /* มากสุดบน */
+ .order-card01{order: 2}
+ .order-card02{order:3}
+ .order-card03{order: 1}
 
 
-
-
+  /* ตัวบวกน้อยสุด */
+ .order-widget01{order: 1}
+ .order-widget02{order: 2}
+ .order-widget03{order: 3}
+ .order-widget04{order: 4}
+ .order-widget05{order: 5}

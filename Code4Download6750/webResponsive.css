@@ -1,0 +1,283 @@
+:root {
+    --primary-color: rgb(14, 111, 207);
+    --secondary-color: rgb(232, 144, 29);
+    --background-color: rgb(123, 182, 250);
+    --text-color-normal: #000;
+    --box-shadow: 0px 2px 10px #00000056;
+    --base-white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color-normal);
+}
+
+/* Header */
+
+header {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+}
+
+.header-container {
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: 40px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.header-button {}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    list-style: none;
+
+    margin-left: 20px;
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+}
+
+
+/*    Button Style    */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color:var(--primary-color);
+    color: var(--base-white-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    padding: 10px 20px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: var(--base-white-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-login:hover {
+    background-color: var(--secondary-color);
+    color: var(--base-white-color);
+}
+
+
+
+/*    Main Section    */
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+
+/*    HERO Section    */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side {
+    width: 60%;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+    }
+}
+
+.right-side {
+    width: 40%;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+/*  SaaS Solution Section    */
+
+.solution {
+    margin-top: 50px;
+    padding: 50px 20px;
+}
+
+.solution-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
+
+.solution-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;   
+}
+
+.item {
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+
+    h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*    Customize Section    */
+
+.customize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+
+/*   Dedicated  Support Section    */
+
+.support {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*    Discover Section    */
+
+.discover {
+    margin-top: 50px;
+}
+
+.discover-content {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);    
+}
+
+
+
+/*    Footer Section    */
+
+footer {
+    background-color: var(--primary-color);
+    padding: 40px 20px;
+    color: var(--base-white-color);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-left {
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
+
+.footer-right {}
+
+.footer-item {
+    h4 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            margin-bottom: 4px;
+
+            a {
+                text-decoration: none;
+                color: var(--base-white-color);
+            }
+
+            a:hover {
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
+
