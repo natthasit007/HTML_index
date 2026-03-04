@@ -16,8 +16,8 @@
                     <img src="https://www.pngplay.com/wp-content/uploads/13/Symbol-Logo-Transparent-Image.png" alt="">
                     <h1 class="brand">TechVault</h1>
                 </div>
-                <nav>
-                    <ul>
+                <nav id="menu">
+                    <ul class="nav-menu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Solutions</a></li>
                         <li><a href="#">Pricing</a></li>
@@ -29,6 +29,11 @@
             <div class="header-button">
                 <button class="btn-signup">Sign up</button>
                 <button class="btn-login">Login</button>
+            </div>
+
+            <!-- Hamburger Button-->
+            <div id="burger-menu">
+                <span></span>
             </div>
 
         </div>
@@ -172,7 +177,7 @@
 
         <div class="container">
             <div class="item">
-                <h2>🔍 Find Your Ideal IT Solution</h2>
+                <h2 class="form-title">🔍 Find Your Ideal IT Solution</h2>
                 <form action="" method="" class="recometation-form">
                     <div class="form-row">
                         <div class="form-group">
@@ -211,36 +216,70 @@
 
                     <div class="form-group">
                         <label for="">Support Required:</label>
-                        <input type="radio" id="minimal" name="support" value="minimal">
-                        <span>Minimal Support</span>
-                        <input type="radio" id="business" name="support" value="business">
-                        <span>Business Hours Support</span>
-                        <input type="radio" id="245" name="support" value="245">
-                        <span>24/5 Support</span>
-                        <input type="radio" id="247" name="support" value="247">
-                        <span>24/7 Premium Support</span>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="minimal" name="support" value="minimal">
+                                <span>Minimal Support</span>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="business" name="support" value="business">
+                                <span>Business Hours Support</span>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="245" name="support" value="245">
+                                <span>24/5 Support</span>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="247" name="support" value="247">
+                                <span>24/7 Premium Support</span>
+                            </div>
+                        </div>
                     </div>
 
 
                     <div class="form-group">
                         <label for="">Key Requirements:</label>
-                        <input type="checkbox" id="security" name="requirements[]" value="security">
-                        <span>High Security & Compliance</span>
-                        <input type="checkbox" id="scalability" name="requirements[]" value="scalability">
-                        <span>Scalability & Flexibility</span>
-                        <input type="checkbox" id="integration" name="requirements[]" value="integration">
-                        <span>Seamless Integration</span>
-                        <input type="checkbox" id="maintenance" name="requirements[]" value="maintenance">
-                        <span>Low Maintenance</span>
-                        <input type="checkbox" id="performance" name="requirements[]" value="performance">
-                        <span>High Performance</span>
-                        <input type="checkbox" id="optimization" name="requirements[]" value="optimization">
-                        <span>Cost Optimization</span>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="security" name="requirements[]" value="security">
+                                <span>High Security & Compliance</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="scalability" name="requirements[]" value="scalability">
+                                <span>Scalability & Flexibility</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="integration" name="requirements[]" value="integration">
+                                <span>Seamless Integration</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="maintenance" name="requirements[]" value="maintenance">
+                                <span>Low Maintenance</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="performance" name="requirements[]" value="performance">
+                                <span>High Performance</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="optimization" name="requirements[]" value="optimization">
+                                <span>Cost Optimization</span>
+                            </div>
+                        </div>
                     </div>
 
 
-                    <button>🔍 Find Your Solution</button>
-                    <button>🔄 Reset Form</button>
+                    <div form-group>
+                        <label for="more">รายละเอีนดเพิ่มเติม</label>
+                        <textarea name="" id="more"
+                        placeholder="..." class="form-textarea"></textarea>
+
+                    </div>
+
+
+                    <div class="form-btn">
+                        <button type="submit" class="btn-submit">🔍 Find Your Solution</button>
+                        <button type="reset" class="btn-reset">🔄 Reset Form</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -288,6 +327,27 @@
             </div>
         </div>
     </footer>
+    <script>
+        var burgerMenu = document.getElementById('burger-menu');
+        var overlay = document.getElementById('menu');
+
+        burgerMenu.addEventListener('click', function () {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+
+        // ปิดเมนูเมื่อกดลิงก์
+        var menuLinks = document.querySelectorAll('#menu a');
+
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                burgerMenu.classList.remove("close");
+                overlay.classList.remove("overlay");
+            });
+        });
+
+
+    </script>
 
 </body>
 
