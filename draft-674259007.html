@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="เว็ปไซด์แนะนำสถานที่ท่องเที่ยวในจังหวัด พร้อมข้อมูลและภาพประกอบที่น่าสนใจ" />
+    <title>Responsive Web Test (ใส่ชื่อนักศึกษา)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+
+    <!-- ตรวจสอบส่วน head ให้ดีว่ามีอะไรขาดหายไปอีกบ้าง ถ้ามีก็ใส่ให้ครบ -->
+
+
+    <!-- เขียน style sheet เพิ่มเติมให้ใกล้เคียงกับตัวอย่าง -->
+    <style>
+        /* ========== Reset เบื้องต้น ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            /* background-color: #333; */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+
+
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+
+        /* ========== ใช้รวม ๆ ========== */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        .card{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            
+        }
+
+        /* ========== Header ========== */
+        header {
+            background-color: #888888;
+            box-shadow: 5px 5px 5px rgb(0, 0, 0);
+
+
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-direction: row;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            margin-top: auto;
+            line-height: 100%;
+        }
+
+
+
+
+        .nav-list,
+        .nav-list a {
+            color: #333;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: 0.3s;
+            display: flex;
+
+            gap: 10px;
+            flex-direction: row;
+
+
+
+        }
+
+        
+        .div-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            top: 0;
+            width: 100%;
+        }
+
+
+        /* ========== Hero ========== */
+        .hero {
+            padding: 88px 0;
+            background: linear-gradient(to right, #befbff, #98eaff);
+            
+            
+        }
+
+        Footer{
+            background-color: #333;
+            color: white;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-self: start;
+        }
+
+        
+        
+
+
+
+
+
+
+        /* =====เขียน style sheet เพิ่มเติม เพื่อให้รองรับการ responsive ด้านล่าง ========== */
+
+        /* ========== โดยทุกอย่างต้องแสดงเป็น 1 คอลัมน์ เหมือนตัวอย่าง ========== */
+
+        @media (max-width: 768px) {}
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="brand">เที่ยวเมืองน่าไป (เชียงใหม่)</h1>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#">สถานที่ท่องเที่ยว</a></li>
+                <li><a href="#">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <p>จังหวัดท่องเที่ยวแนะนำ</p>
+                <h2>ค้นพบเสน่ห์ของเมืองท่องเที่ยวที่คุณไม่ควรพลาด</h2>
+                <p>สัมผัสธรรมชาติ วัฒนธรรม และอาหารท้องถิ่นที่น่าสนใจ
+                    พร้อมสถานที่ยอดนิยมที่เหมาะสำหรับการพักผ่อนในวันหยุด</p>
+                <a href="#" class="btn-primary">อ่านเพิ่มเติม</a>
+
+
+                <img src="https://vasimr.net/wp-content/uploads/2023/04/%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-2566.jpg"
+                    alt="ภาพสถานที่ท่องเที่ยว" />
+
+            </div>
+        </section>
+
+        <!-- Places Section - สถานที่ท่องเที่ยวแนะนำ -->
+        <section>
+            <div>
+                <h2>สถานที่ท่องเที่ยวแนะนำ</h2>
+                <p>ตัวอย่างสถานที่ท่องเที่ยวที่น่าสนใจในจังหวัด</p>
+            </div>
+        
+            <div>
+                <article class="card">
+                    <img src="https://www.chillpainai.com/src/wewakeup/scoop/images/a1cb2552712c226df649ac49906ff96a24817947.jpg"
+                        alt="วัดพระธาตุดอยสุเทพราชวรวิหาร" />
+                    <div>
+                        <h3>วัดพระธาตุดอยสุเทพราชวรวิหาร</h3>
+                        <p>
+                            เอาใจสายบุญ
+                        </p>
+                        <a href="https://chillpainai.com/scoop/15434" target="_blank"
+                            class="btn-secondary">อ่านเพิ่มเติม</a>
+                    </div>
+                    <div>
+                        <article class="card">
+                            <img src="https://www.chillpainai.com/src/wewakeup/scoop/images/8ae52fb5b3402282a8c4fc369b20e4e7dd9e7901.jpg"
+                                alt="บ้านข้างวัด" />
+                            <div>
+                                <h3>บ้านข้างวัด</h3>
+                                <p>
+                                    สำหรับใครที่เป็นสายชิค สายชิลต้องมาที่นี่
+                                </p>
+                                <a href="https://chillpainai.com/scoop/15434" target="_blank"
+                                    class="btn-secondary">อ่านเพิ่มเติม</a>
+                            </div>
+                            <div>
+                                <article class="card">
+                                    <img src="https://www.chillpainai.com/src/wewakeup/scoop/images/979f4c1efeeaf44fc468bc8b5bec927c1fdf72ec.jpg"
+                                        alt="ประตูท่าแพ" />
+                                    <div>
+                                        <h3>ประตูท่าแพ</h3>
+                                        <p>
+                                            มาเชียงใหม่ทั้งที ถ้าไม่ได้มาเช็กอินที่นี่ก็คงเหมือนมาไม่ถึง
+                                        </p>
+                                        <a href="https://chillpainai.com/scoop/15434" target="_blank"
+                                            class="btn-secondary">อ่านเพิ่มเติม</a>
+                                    </div>
+                                </article>
+                            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2026 เที่ยวเมืองน่าไป (ณัฐสิทธิ์ อุดม). All Rights Reserved.</p>
+        <span>Email: 674259007@webmail.npru.ac.th</span>
+        <span>Facebook: เที่ยวเมืองน่าไป (เชียงใหม่)</span>
+    </footer>
+
+</body>
+
+</html>
